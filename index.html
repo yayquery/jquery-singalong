@@ -31,7 +31,7 @@
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 
 	.description {font-size: 16px;}
-	#lyrics { height: 75px; padding-top: 50px; position:relative;}
+	#lyrics { height: 75px; margin-top: 36px; padding-top: 13px; position:relative;}
 	#lyrics > span { display:none; font-size: 34px; font-style: italic; color: #333; font-family: 'Garamond Premier';}
 
 	#ball { display:block; position:absolute; left: 0; top: 0; background: red; width: 10px; height: 10px; -moz-border-radius: 5px; text-indent: -999px; overflow:hidden; }
@@ -104,6 +104,24 @@
 	</div>
 
 	<div style="clear:both"></div>
+
+<h2>Video demo</h2>
+<!-- "Video For Everybody" by Kroc Camen  -->
+<div id="videowrap">
+<video width="640" height="360" poster="/code/video_for_everybody/poster.jpg" controls>
+	<source src="http://tinyvid.tv/vfe/big_buck_bunny.ogv" type="video/ogg" />
+	<source src="http://tinyvid.tv/vfe/big_buck_bunny.mp4" type="video/mp4" />
+</video>
+
+<div class="videotip" id="tree" data-start="3" data-stop="4">OMFG a tree!</div>
+
+</div>
+
+<style>
+#videowrap { postion:relative;}
+.videotip { position:absolute; background: rgba(200,200,200,0.7); color: #bbb; width:120px; height: 70px; -moz-box-shadow: 2px 2px 2px rgba(50,50,50,0.4); -webkit-box-shadow: 2px 2px 2px rgba(50,50,50,0.4);}
+#tree { left: 400px; top: 200px;}
+</style>
 
 	<h2>Annotate &lt;audio&gt; and &lt;video&gt;</h2>
 
