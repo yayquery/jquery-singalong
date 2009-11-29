@@ -332,9 +332,12 @@ $.fn.replaceText = function( search, replace, text_only ) {
   
 
 
-function bouncyball(data){
+
+
+
+jQuery.fn.bouncyball = function(data){
     
-    var spans = $('span.word:visible'),
+    var spans = $(this),
         height= spans.height(),
         stops = spans.map(function(){
             return {left: $(this).position().left + $(this).width()/2, 
@@ -360,24 +363,8 @@ function bouncyball(data){
       },stepDuration);
     
     });
+
+	return this;
     
 }
 
-$(document).ready(function(){
-    
-    $('#lyrics > span').replaceText(/(\w+)/g,'<span class="word">$1<\/span>' );
-    $(document).bind('show.annotate',function(e,data){
-        bouncyball(data);
-    })
-})
-/*
-
-
-
-$('#ball').animate({
-     left: '-=50px', //, 'ball'],
-     top: ['-=10px', 'ball'] 
-}
-,600)
-
-*/
