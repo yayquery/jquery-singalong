@@ -141,7 +141,7 @@
 
 		// but i'm gonna automate a bit:
 	
-		$('#content span').each(function(){
+		$('#lyrics span').each(function(){
 		  jQuery('audio').singalong({
 		        start : $(this).attr('data-start'),
 		        stop  : $(this).attr('data-stop'),
@@ -149,6 +149,11 @@
 		  });
 		});
 
+
+        $('#lyrics > span').replaceText(/(\w+)/g,'<span class="word">$1<\/span>' );
+         $(document).bind('show.annotate',function(e,data){
+             $('#lyrics span.word:visible').bouncyball(data);
+         });
 	})
 	</script>
 
