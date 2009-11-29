@@ -342,13 +342,10 @@ function bouncyball(data){
          }).get();
     
     $.easing.ball = function (x, t, b, c, d,s) {
-        
-        
     	// this is the best i got:
     	//  (Math.sin(t/d*Math.PI)*-height*1/x) + c*b + 100;	
-    		
+		// but it still doesn't work.
         var ret = (Math.sin(t/d*Math.PI)*-height) + b;
-       //console.log(arguments, ret)
        	return ret;
     }
     
@@ -356,13 +353,13 @@ function bouncyball(data){
         stepDuration = (data.stop - data.start) * 1000/stops.length;
     
     $.each(stops,function f(k,v){
-      console.log(v)
+     
       $ball.animate({
            left: v.left+'px', // 'easeInOutCirc'],
            top: [v.top+'px', 'ball']
       },stepDuration);
     
-    })
+    });
     
 }
 
