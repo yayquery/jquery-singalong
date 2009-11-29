@@ -55,9 +55,12 @@
     <h2>License</h2>
 <p>WTFPL</p>
 <h2>Authors</h2>
-<p>yayQuery (yayquery@gmail.com)<br/><br/>      </p>
+<p>yayQuery (yayquery@gmail.com)
+<br/>
+<br/>      </p>
 <h2>Contact</h2>
-<p> (yayquery@gmail.com)<br/>      </p>
+<p> (yayquery@gmail.com)
+<br/>      </p>
 
 
     <h2>Download</h2>
@@ -71,6 +74,90 @@
       <pre>$ git clone git://github.com/yayquery/jquery-singalong</pre>
     </p>
       
+
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+
+
+
+	<h2>Annotate &lt;audio&gt;</h1>
+
+	<div class="description">
+	  <p>the jQuery annotate plugin can add full HTML annotations to HTML5 &lt;video&gt; or &lt;audio&gt; elements. </p>
+	  <p>It uses the HTML5 media elements API. It can be used for:</p>
+	  <ul>
+	    <li>lyrics sing-alongs (woo!)</li>
+	     <li>rich text callouts</li>
+	     <li>captions</li>
+	     <li>youtube-style video annotations (useful for video podcasts)</li>
+	     </ul><br>
+	  <p><a href="view-source:http://paulirish.com/demo/annotate">view-source</a> or see <a href="http://gist.github.com/240707">this gist</a> for the MIT-licensed source. <small>[<a href="http://musichackdayboston.pbworks.com/html5-audio-annotating">boston music hack day wiki project page</a>]</small></p>
+
+	  <p>This will be used in <a href="http://yayquery.com">yayQuery podcast</a>, a jQuery podcast. yayQuery theme by Jonathan Neal.</a>
+
+	    <p>Ya dude. You need a good browser for this. IE no funciona. </p>
+	</div>
+
+
+	  <audio  autobuffer="autobuffer" controls = "controls">
+	         <source src="http://paulirish.com/demo/js/yayquery30sec.ogg"></source>
+	        <source src="http://paulirish.com/demo/js/yayquery30sec.mp3"></source>
+	         audio tag demo requires HTML 5 (try Firefox 3.5+)
+	  </audio>
+
+	<div id="lyrics">
+	    <div id="ball">b</div>
+	    <span  data-start="1" data-stop="3">Come on, come on everybody, lets go.</span> 
+	    <span  data-start="4" data-stop="6.5">Do do do, do do do...</span> 
+	    <span  data-start="7" data-stop="9.5">...Do do do, do do do...</span> 
+	    <span  data-start="10" data-stop="14">do do do-do-doot. do do do-do-doot. douh doot douh doot douh doot !</span> 
+	    <span  data-start="15" data-stop="17">yayQuery, <a href="http://yayquery.com"><span class="word">yayQuery</span></a></span> 
+	    <span  data-start="18" data-stop="20">A whole lot of YAY and a query too</span> 
+	    <span  data-start="21" data-stop="22">So come on, lets go,</span> 
+	    <span  data-start="22" data-stop="23">because we got a show</span> 
+	    <span  data-start="24" data-stop="28">for youuuu</span> 
+	    <span  data-start="28.5" data-stop="29" style="font-style:normal; color: pink; font-size: 40px;">&lt;3</span>
+	</div>
+
+	<div style="clear:both"></div>
+
+	<style>
+	.description { width: 600px; float: right; font-size: 16px;}
+	#lyrics { height: 75px; padding-top: 50px; position:relative;}
+	#lyrics > span { display:none; font-size: 34px; font-style: italic; color: #333; font-family: 'Garamond Premier';}
+
+	#ball { display:block; position:absolute; left: 0; top: 0; background: red; width: 10px; height: 10px; -moz-border-radius: 5px; text-indent: -999px; overflow:hidden; }
+	</style>
+
+
+	<script src="/demo/js/jquery.annotatevideo.js"></script>
+	<script>
+
+
+	/* normally: * / 
+	jQuery('audio').annotatevideo({ 
+	  start: 3, 
+	  stop: 4, 
+	  elem: $('#hey')
+	  })l
+	/*        */
+
+	// but i'm gonna automate a bit:
+
+	$('#content span').each(function(){
+	  jQuery('audio').annotatevideo({
+	        start : $(this).attr('data-start'),
+	        stop  : $(this).attr('data-stop'),
+	        elem  : $(this)
+	  });
+	});
+
+
+	</script>
+
+
     <div class="footer">
       get the source code on GitHub : <a href="http://github.com/yayquery/jquery-singalong">yayquery/jquery-singalong</a>
     </div>
