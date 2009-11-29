@@ -3,7 +3,7 @@
 $.fn.singalong = function(options) {
 
     // build main options before element iteration
-    var opts = $.extend({}, $.fn.annotatevideo.defaults, options);
+    var opts = $.extend({}, $.fn.singalong.defaults, options);
     // iterate and reformat each matched element
     return this.each(function() {
         
@@ -41,7 +41,7 @@ $.fn.singalong = function(options) {
         });
         
     }); // this.each
-}; // $.fn.annotatevideo
+}; // $.fn.singalong
 
   $.fn.singalong.defaults = {
       start : 0,
