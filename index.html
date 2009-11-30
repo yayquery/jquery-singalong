@@ -106,17 +106,23 @@
 	<div style="clear:both"></div>
 
 <h2>Video demo</h2>
+
 <!-- "Video For Everybody" by Kroc Camen  -->
 <div id="videowrap">
-<video width="640" height="360" poster="/code/video_for_everybody/poster.jpg" controls>
-	<source src="http://tinyvid.tv/vfe/big_buck_bunny.ogv" type="video/ogg" />
-	<source src="http://tinyvid.tv/vfe/big_buck_bunny.mp4" type="video/mp4" />
-</video>
+    
+    <video width="640" height="360" poster="/code/video_for_everybody/poster.jpg" controls>
+    	<source src="http://tinyvid.tv/vfe/big_buck_bunny.ogv" type="video/ogg" />
+    	<source src="http://tinyvid.tv/vfe/big_buck_bunny.mp4" type="video/mp4" />
+    </video>
 
-<div class="videotip" id="tree" data-start="3" data-stop="5">OMFG a tree!</div>
-<div class="videotip" id="grass" data-start="7" data-stop="10">grass ↓↓↓↓ !</div>
-<div class="videotip" id="cattail" data-start="12" data-stop="15">These are called cattails or <em>Typha</em>. <a href="http://en.wikipedia.org/wiki/Typha" target="_blank">Wikipedia - Typha</a></div>
-<div class="videotip" id="steven" data-start="16" data-stop="20">His name is Steven. That may be a lie. <br><Br>He may be about to be hit. That may also be a lie...</div>
+    <div class="videotip" id="tree" data-start="3" data-stop="5">OMFG a tree!</div>
+    <div class="videotip" id="grass" data-start="7" data-stop="10">grass ↓↓↓↓ !</div>
+    <div class="videotip" id="cattail" data-start="12" data-stop="15">These are called cattails or <em>Typha</em>. <a href="http://en.wikipedia.org/wiki/Typha" target="_blank">Wikipedia - Typha</a></div>
+    <div class="videotip" id="steven" data-start="16" data-stop="20">His name is Steven. That may be a lie. <br><Br>He may be about to be hit. That may also be a lie...</div>
+    <div class="videotip" id="divs" data-start="22" data-stop="32">These annotations are just plain-jane divs. They are fully <b>styleable</b> and eventable. Go crazy.</div>
+    
+     <div class="videotip" id="poke" data-start="50" data-stop="51">← Poke!</div>
+
 </div>
 
 <style>
@@ -126,6 +132,9 @@
 #grass { left:33px; top:263px;}
 #cattail { left:333px; top:207px;}
 #steven { height:112px; left:352px; top:154px; width:181px; }
+#divs { width: 200px; height: 130px; left: 10px; top: 200px;}
+#poke { font-weight:bold; width: auto; height: auto; left: 309px; top: 191px; }
+
 </style>
 
 	<h2>Annotate &lt;audio&gt; and &lt;video&gt;</h2>
