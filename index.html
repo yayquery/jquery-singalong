@@ -34,7 +34,7 @@
 	#lyrics { height: 75px; margin-top: 36px; padding-top: 13px; position:relative;}
 	#lyrics > span { display:none; font-size: 34px; font-style: italic; color: #333; font-family: 'Garamond Premier';}
 
-	#ball { display:block; position:absolute; left: 0; top: 0; background: red; width: 10px; height: 10px; -moz-border-radius: 5px; text-indent: -999px; overflow:hidden; }
+	#ball { display:block; position:absolute; left: 0; top: 0; background: red; width: 10px; height: 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px;  text-indent: -999px; overflow:hidden; }
 	</style>
 	
 </head>
@@ -103,7 +103,6 @@
 	    <span  data-start="28.5" data-stop="29" style="font-style:normal; color: pink; font-size: 40px;">&lt;3</span>
 	</div>
 
-	<div style="clear:both"></div>
 
 <h2>Video demo</h2>
 
@@ -151,11 +150,11 @@
 	     <li>captions</li>
 	     <li>youtube-style video annotations (useful for video podcasts)</li>
 	     </ul>
-	  <p><small>[<a href="http://musichackdayboston.pbworks.com/html5-audio-annotating">boston music hack day wiki project page</a>]</small></p>
+	  <p>This plugin was developed during <a href="http://musichackdayboston.pbworks.com/html5-audio-annotating">Boston music hack day</a> and won some awesome prize for being sweet. We also totally broke the polling software as it didn't escape angle brackets and this project title had an &lt;audio&gt; tag in it. Whoops!</p>
 
 	  <p>This will be used in <a href="http://yayquery.com">yayQuery podcast</a>, a jQuery podcast. yayQuery theme by Jonathan Neal.</p>
 
-	    <p>Ya dude. You need a good browser for this. IE no funciona. </p>
+	    <p>This only works in browsers that support the HTML5 media elements. </p>
 	</div>
 
 
