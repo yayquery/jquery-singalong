@@ -1,3 +1,11 @@
+
+/*!
+ * jQuery Singalong plugin
+ * by yayQuery 2009 http://yayquery.com
+ * licensed WTFPL
+ * http://yayquery.github.com/jquery-singalong/
+*/
+
 (function($) {
 
 $.fn.singalong = function(options) {

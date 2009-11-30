@@ -333,7 +333,9 @@ $.fn.replaceText = function( search, replace, text_only ) {
 
 
 
-
+// bouncyball plugin
+// licensed WTFPL by yayQuery
+// v 0.00 alpha
  
 jQuery.fn.bouncyball = function(data){
     
